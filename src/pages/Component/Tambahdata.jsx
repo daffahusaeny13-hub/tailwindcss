@@ -1,90 +1,76 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function FormMenu() {
-  const [formData, setFormData] = useState({
-    makanan: "",
-    paket: "",
-    harga: "",
-  });
+function Tabeldata() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/menu");
+        setData(res.data);
+      } catch (err) {
+        console.error("Error fetching data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });                 
-  };
+    fetchData();
+  }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    try {
-      const response = await axios.post("http://localhost:5000/menu", formData);
-
-      console.log("Respon server:", response.data);
-      alert("Data berhasil ditambahkan");
-
-      setFormData({
-        makanan: "",
-        paket: "",
-        harga: "",
-      });
-
-      navigate("/tabeldata"); 
-    } catch (error) {
-      console.error("Eror saat menambahkan data:", error);
-      alert("Gagal menambahkan data!");
-    } finally {
-      setLoading(false);
-    }
-  };
+  if (loading) return <p>Loading...</p>;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Makanan:</label>
-        <input
-          type="text"
-          name="makanan"
-          value={formData.makanan}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label>Paket:</label>
-        <input
-          type="text"
-          name="paket"
-          value={formData.paket}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label>Harga:</label>
-        <input
-          type="number"
-          name="harga"
-          value={formData.harga}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <button type="submit" disabled={loading}>
-        {loading ? "Menyimpan..." : "Simpan"}
-      </button>
-    </form>
+    <div>
+      <h1>Daftar Menu</h1>
+      <table border="1" cellPadding="8" style={{ borderCollapse: "collapse" }}>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Makanan</th>
+            <th>Paket</th>
+            <th>Harga</th>
+            <div className="mb-4">
+              <label
+              className="block text-gray-700 text-sm font-blod mb-4"
+              htmlFor="makanan"
+              >
+                makanan 
+              </label>
+              <input 
+               id="makanan"
+               name="makanan"
+               type="text"
+               value={FormData.makanan || ""}
+               onChange={handleChange}
+               className="shadow appearance-none border rounded w-full"
+               required
+               >
+              </input>
+            </div>
+          </tr>
+        </thead>
+        <tbody>
+          {data.length === 0 ? (
+            <tr>
+              <td colSpan="4">Belum ada data</td>
+            </tr>
+          ) : (
+            data.map((item, index) => (
+              <tr key={item.id || index}>
+                <td>{index + 1}</td>
+                <td>{item.makanan}</td>
+                <td>{item.paket}</td>
+                <td>{item.harga}</td>
+              </tr>
+            ))
+          )}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
-export default FormMenu;
-
+export default Tabeldata;

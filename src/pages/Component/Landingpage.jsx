@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Binus from '../../ppdb/bimj.jpg'
+import Binus from '../../ppdb/.jpg'
 
 
 const Landingpage = () => {
@@ -58,49 +58,3 @@ const Landingpage = () => {
 };
 
 export default Landingpage;  
-
-
-
- <form onSubmit={handleSubmit}>
-      <div>
-        <label>Makanan:</label>
-        <input
-          type="text"
-          name="makanan"
-          value={formData.makanan}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label>Paket:</label>
-        <input
-          type="text"
-          name="paket"
-          value={formData.paket}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label>Harga:</label>
-        <input
-          type="number"
-          name="harga"
-          value={formData.harga}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <button type="submit" disabled={loading}>
-        {loading ? "Menyimpan..." : "Simpan"}
-      </button>
-    </form>
-  );
-}
-
-export default FormMenu;
-
