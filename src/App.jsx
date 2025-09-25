@@ -1,14 +1,24 @@
 import "./App.css";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Tambahdata from "./auth/Pages/Tambahdata.jsx";
-import Tabeldata from "./auth/Pages/Tabeldata.jsx";
+import Tabeldata from "./Component/tabeldata";
+import Tambahdata from "./Component/Tambahdata";
+import Edit from "./Component/Edit";
+import Sidnav from "./Component/Sidnav";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Tabeldata />} />
-      <Route path="/tambah" element={<Tambahdata />} />
-    </Routes>
+    <div>
+      <div>
+        <Sidnav/>
+      </div>
+      <Routes>
+        <Route path="/Tabeldata" element={<Tabeldata />} />
+        <Route path="/" element={<Tambahdata />} />
+        <Route path="/Edit/:id" element={<Edit />} />
+        <Route path="/Sidnav" element={<Sidnav />} />
+      </Routes>
+    </div>
   );
 }
 
