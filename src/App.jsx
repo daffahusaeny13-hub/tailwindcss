@@ -5,19 +5,31 @@ import Tabeldata from "./Component/tabeldata";
 import Tambahdata from "./Component/Tambahdata";
 import Edit from "./Component/Edit";
 import Sidnav from "./Component/Sidnav";
+import Swal from "sweetalert2";
 
 function App() {
+    const showAlert = () => {
+    Swal.fire({
+      title: "Drag me!",
+      icon: "success",
+      draggable: true
+    });
+  };
+
   return (
+    <div className="flex">
+      <Sidnav />
+      <div className="flex-1 p-6 pl-16">
+        <Routes>
+          <Route path="/" element={<Sidnav/>} />
+          <Route path="/tabeldata" element={<Tabeldata />} />
+          <Route path="/tambahdata" element={<Tambahdata />} />
+          <Route path="/edit/:id" element={<Edit />} />
+        </Routes>
     <div>
-      <div>
-        <Sidnav/>
+      <button onClick={showAlert}></button>
+    </div>
       </div>
-      <Routes>
-        <Route path="/Tabeldata" element={<Tabeldata />} />
-        <Route path="/" element={<Tambahdata />} />
-        <Route path="/Edit/:id" element={<Edit />} />
-        <Route path="/Sidnav" element={<Sidnav />} />
-      </Routes>
     </div>
   );
 }

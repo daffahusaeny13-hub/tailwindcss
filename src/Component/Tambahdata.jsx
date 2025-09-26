@@ -1,58 +1,81 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
-function Tambahdata() {
-  const [formData, setFormData] = useState({ makanan: "", paket: "", harga: "" });
+function TambahData() {
   const navigate = useNavigate();
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const [makanan, setMakanan] = useState("");
+  const [harga, setHarga] = useState("");
+  const [paket, setPaket] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      await axios.post("http://localhost:5000/menu", formData);
-      navigate("/tabeldata");
-    } catch (err) {
-      console.error(err);
-    }
-  };
+    
+    console.log({
+      makanan,
+      harga,
+      paket,
+    });
 
+
+    navigate("/tabeldata");
+  }
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Tambah Data</h1>
+    <div className="p-6">
+      <h1 className="text-center text-2xl font-bold py-2">Data Menu</h1>
+
       <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          name="makanan"
-          value={formData.makanan}
-          onChange={handleChange}
-          placeholder="Makanan"
-          className="border p-2 w-full"
-          required
-        />
-        <input
-          name="paket"
-          value={formData.paket}
-          onChange={handleChange}
-          placeholder="Paket"
-          className="border p-2 w-full"
-          required
-        />
-        <input
-          name="harga"
-          value={formData.harga}
-          onChange={handleChange}
-          placeholder="Harga"
-          className="border p-2 w-full"
-          type="number"
-          required
-        />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-          Simpan
-        </button>
+        <div>
+          <label className="block mb-1 font-semibold">Makanan</label>
+          <input
+            type="text"
+            value={makanan}
+            onChange={(e) => setMakanan(e.target.value)}
+            className="border p-1"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1 font-semibold">Harga</label>
+          <input
+            type="number"
+            value={harga}
+            onChange={(e) => setHarga(e.target.value)}
+            className="border p-1"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="block mb-1 font-semibold">Paket</label>
+          <input
+            type="text"
+            value={paket}
+            onChange={(e) => setPaket(e.target.value)}
+            className="border p-1"
+          />
+        </div>
+
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => navigate("/tabeldata")}
+            className="bg-blue-400 text-white px-3 py-2 rounded"
+          >
+            Batal
+          </button>
+          <button
+            type="submit"
+            className="bg-green-400 text-white px-3 py-2 rounded"
+          >
+            Simpan
+          </button>
+        </div>
       </form>
     </div>
   );
 }
 
-export default Tambahdata;
+export default TambahData;

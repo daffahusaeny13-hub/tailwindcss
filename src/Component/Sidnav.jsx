@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; 
+import Swal from "sweetalert2";
 
 function Sidnav() {
   const [open, setOpen] = useState(false);
-
   return (
     <div className="flex">
       <button
@@ -18,15 +18,9 @@ function Sidnav() {
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="text-2xl font-bold mb-6">Bina Nusantara</div>
+        <div className="text-2xl font-bold mb-4 py-9">Masukkan Text...</div>
 
         <nav className="space-y-3">
-          <a
-            href="/dashboard"
-            className="block py-2 px-3 rounded hover:bg-blue-600 transition"
-          >
-            Dashboard
-          </a>
           <a
             href="/tabeldata"
             className="block py-2 px-3 rounded hover:bg-blue-600 transition"
@@ -38,12 +32,6 @@ function Sidnav() {
           className="block py-2 px-3 rounded hover:bg-blue-600 transition"
           >
             Tambah Data 
-          </a>
-          <a
-            href="/edit"
-            className="block py-2 px-3 rounded hover:bg-blue-600 transition"
-          >
-            Edit
           </a>
         </nav>
       </div>

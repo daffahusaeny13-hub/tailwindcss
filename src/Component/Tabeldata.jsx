@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import Swal from "sweetalert2";
 
 function Tabeldata() {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
+  navigate("/Edit");
 
   useEffect(() => {
     const fetchData = async () => {
