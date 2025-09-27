@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Tabeldata from "./Component/tabeldata";
 import Tambahdata from "./Component/Tambahdata";
-import Edit from "./Component/Edit";
+import EditData from "./Component/editData";
 import Sidnav from "./Component/Sidnav";
 import Swal from "sweetalert2";
 
@@ -24,7 +24,8 @@ function App() {
           <Route path="/" element={<Sidnav/>} />
           <Route path="/tabeldata" element={<Tabeldata />} />
           <Route path="/tambahdata" element={<Tambahdata />} />
-          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/editdata" element={<EditData />} />
+
         </Routes>
     <div>
       <button onClick={showAlert}></button>
