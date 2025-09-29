@@ -25,39 +25,39 @@ function TambahData() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="p-6 border rounded-lg shadow-lg w-full max-w-md bg-white">
-        <h1 className="text-center text-2xl font-bold py-2">Menu</h1>
+      <div className="p-2 border shadow-lg bg-white">
+        <h1 className="text-center text-2xl font-bold py-1">Data Menu</h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="text-center block mb-1 font-semibold">Makanan</label>
+            <label className="text-center block mb-1 font-semibold text-cyan-300">Makanan</label>
             <input
               type="text"
               value={makanan}
               onChange={(e) => setMakanan(e.target.value)}
-              className="border p-2 w-full rounded"
+              className="border p-1 w-50 ml-25 mr-25 rounded"
               required
             />
           </div>
 
           <div>
-            <label className="text-center block mb-1 font-semibold">Harga</label>
+            <label className="text-center block mb-1 font-semibold text-cyan-300">Harga</label>
             <input
               type="number"
               value={harga}
               onChange={(e) => setHarga(e.target.value)}
-              className="border p-2 w-full rounded"
+              className="border p-1 w-50 ml-25 mr-25 rounded"
               required
             />
           </div>
 
           <div>
-            <label className="text-center block mb-1 font-semibold">Paket</label>
+            <label className="text-center block mb-1 font-semibold text-cyan-300">Paket</label>
             <input
-              type="text"
+              type="text" 
               value={paket}
               onChange={(e) => setPaket(e.target.value)}
-              className="border p-2 w-full rounded"
+              className="border p-1 w-50 ml-25 mr-25 rounded"
             />
           </div>
 
@@ -65,13 +65,14 @@ function TambahData() {
             <button
               type="button"
               onClick={() => navigate("/tabeldata")}
-              className="bg-blue-400 text-white px-3 py-2 rounded"
+              className="bg-blue-300 text-white px-2 py-1 rounded"
             >
               Batal
             </button>
             <button
               type="submit"
-              className="bg-green-400 text-white px-3 py-2 rounded"
+              
+              className="bg-green-300 text-white px-3 py-2 rounded"
             >
               Simpan
             </button>

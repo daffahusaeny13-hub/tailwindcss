@@ -42,7 +42,7 @@ const handleEdit = (index) => {
 
   return (
     <div className="p-6">
-      <h1 className="text-center text-2xl font-bold mb-4">Daftar Menu</h1>
+      <h1 className="text-center text-2xl font-bold mb-4">Menu</h1>
       <button
         onClick={() => navigate("/tambahdata")}
            className="bg-blue-500 text-white px-4 py-2 rounded">

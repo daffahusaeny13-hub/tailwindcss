@@ -53,7 +53,7 @@ function EditData() {
 
   return (
     <div className="p-6">
-      <h1 className="text-center text-2xl font-bold mb-4">Edit Data Menu</h1>
+      <h1 className="text-center text-2xl font-bold mb-4">Edit Data</h1>
 
       <form
         onSubmit={handleSubmit}

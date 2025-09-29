@@ -7,7 +7,13 @@ function Navbar() {
       <h1 className="font-bold text-xl">Menu App</h1>
       <div className="space-x-4">
         <Link to="/tabeldata" className="hover:text-gray-300">Tabel Data</Link>
-        <Link to="/tambah" className="hover:text-gray-300">Tambah Data</Link>
+        <Link to="/tambah" className="hover:text-gray-300">Tambah Data Kantin</Link>
+        <Link to="/tambah" className="hover:text-gray-300">Tambah Data Siswa </Link>
+        <Link to="/tambah" className="hover:text-gray-300">Profil</Link>
+        <Link to="/tambah" className="hover:text-gray-300">Sidnav</Link>
+        <Link to="/tambah" className="hover:text-gray-300">Edit Data</Link>
+        <Link to="/tambah" className="hover:text-gray-300">Data Siswa</Link>
+        <Link to="/tambah" className="hover:text-gray-300">Dashboard</Link>
       </div>
     </nav>
   );

@@ -18,20 +18,44 @@ function Sidnav() {
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="text-2xl font-bold mb-4 py-9">Masukkan Text...</div>
+        <div className="text-2xl font-bold mb-4 py-9"></div>
 
         <nav className="space-y-3">
+          <a
+            href="/Dashboard"
+            className="block py-2 px-3 rounded hover:bg-blue-600 transition"
+          >
+            Dashboard
+          </a>
+          <a
+            href="/DataSiswa"
+            className="block py-2 px-3 rounded hover:bg-blue-600 transition"
+          >
+            Data Siswa
+          </a>
           <a
             href="/tabeldata"
             className="block py-2 px-3 rounded hover:bg-blue-600 transition"
           >
-            Tabel Data
+            Data Menu Kantin 
           </a>
           <a 
           href="tambahdata"
           className="block py-2 px-3 rounded hover:bg-blue-600 transition"
           >
-            Tambah Data 
+            Tambah Data Kantin
+          </a>
+          <a 
+          href="tambahdatasiswa"
+          className="block py-2 px-3 rounded hover:bg-blue-600 transition"
+          >
+            Tambah Data Siswa
+          </a>
+          <a
+            href="/Profil"
+            className="block py-2 px-3 rounded hover:bg-blue-600 text-white fixed bottom-0 left-0 m-4"
+          >
+            Profil
           </a>
         </nav>
       </div>

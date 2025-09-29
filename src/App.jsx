@@ -2,9 +2,13 @@ import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Tabeldata from "./Component/tabeldata";
+import DataSiswa from "./Component/DataSiswa";
 import Tambahdata from "./Component/Tambahdata";
+import TambahDataSiswa from "./Component/TambahDataSiswa";
 import EditData from "./Component/editData";
 import Sidnav from "./Component/Sidnav";
+import Profil from "./Component/Profil";
+import Dashboard from "./Component/Dashboard";
 import Swal from "sweetalert2";
 
 function App() {
@@ -23,8 +27,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Sidnav/>} />
           <Route path="/tabeldata" element={<Tabeldata />} />
+          <Route path="/datasiswa" element={<DataSiswa />} />
           <Route path="/tambahdata" element={<Tambahdata />} />
+          <Route path="/tambahdatasiswa" element={<TambahDataSiswa />} />
           <Route path="/editdata" element={<EditData />} />
+          <Route path="/profil" element={<Profil />} />
+          <Route path="/dashboard" element={<Dashboard />} />
 
         </Routes>
     <div>
