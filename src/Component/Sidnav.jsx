@@ -39,18 +39,6 @@ function Sidnav() {
           >
             Data Menu Kantin 
           </a>
-          <a 
-          href="tambahdata"
-          className="block py-2 px-3 rounded hover:bg-blue-600 transition"
-          >
-            Tambah Data Kantin
-          </a>
-          <a 
-          href="tambahdatasiswa"
-          className="block py-2 px-3 rounded hover:bg-blue-600 transition"
-          >
-            Tambah Data Siswa
-          </a>
           <a
             href="/Profil"
             className="block py-2 px-3 rounded hover:bg-blue-600 text-white fixed bottom-0 left-0 m-4"

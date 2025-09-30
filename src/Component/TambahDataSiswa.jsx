@@ -23,7 +23,7 @@ const handleSubmit = (e) => {
 
   localStorage.setItem("siswa", JSON.stringify([...oldData, newData])); 
 
-  Swal.fire("Sukses", "Data berhasil ditambahkan!", "success");
+  Swal.fire("Sukses", "Data Berhasil Ditambah😨😰!", "success");
   navigate("/datasiswa");
 };
 

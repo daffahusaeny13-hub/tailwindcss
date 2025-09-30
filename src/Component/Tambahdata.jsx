@@ -18,7 +18,7 @@ function TambahData() {
 
     localStorage.setItem("menu", JSON.stringify([...oldData, newData])); 
 
-    Swal.fire("Sukses", "Data berhasil ditambahkan!", "success");
+    Swal.fire("Sukses", "Data berhasil Ditambah😋😋!", "success");
     
     navigate("/tabeldata");
   };
@@ -53,7 +53,7 @@ function TambahData() {
 
           <div>
             <label className="text-center block mb-1 font-semibold text-cyan-300">Paket</label>
-            <input
+            <input 
               type="text" 
               value={paket}
               onChange={(e) => setPaket(e.target.value)}

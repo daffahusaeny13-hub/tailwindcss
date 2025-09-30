@@ -2,21 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  return (
-    <nav className="bg-gray-800 text-white p-4 flex justify-between">
-      <h1 className="font-bold text-xl">Menu App</h1>
-      <div className="space-x-4">
-        <Link to="/tabeldata" className="hover:text-gray-300">Tabel Data</Link>
-        <Link to="/tambah" className="hover:text-gray-300">Tambah Data Kantin</Link>
-        <Link to="/tambah" className="hover:text-gray-300">Tambah Data Siswa </Link>
-        <Link to="/tambah" className="hover:text-gray-300">Profil</Link>
-        <Link to="/tambah" className="hover:text-gray-300">Sidnav</Link>
-        <Link to="/tambah" className="hover:text-gray-300">Edit Data</Link>
-        <Link to="/tambah" className="hover:text-gray-300">Data Siswa</Link>
-        <Link to="/tambah" className="hover:text-gray-300">Dashboard</Link>
-      </div>
-    </nav>
-  );
-}
 
+}
 export default Navbar;

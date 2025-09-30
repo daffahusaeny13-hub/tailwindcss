@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Tabeldata from "./Component/tabeldata";
+import TabelData from "./Component/tabeldata";
 import DataSiswa from "./Component/DataSiswa";
 import Tambahdata from "./Component/Tambahdata";
 import TambahDataSiswa from "./Component/TambahDataSiswa";
@@ -24,16 +24,17 @@ function App() {
     <div className="flex">
       <Sidnav />
       <div className="flex-1 p-6 pl-16">
-        <Routes>
+        {/* Route berfungsi untuk memanggil isi dari file yang ada di Sidnav */}
+        <Routes> 
           <Route path="/" element={<Sidnav/>} />
-          <Route path="/tabeldata" element={<Tabeldata />} />
+          <Route path="/datakantin" element={<TabelData />} />
           <Route path="/datasiswa" element={<DataSiswa />} />
           <Route path="/tambahdata" element={<Tambahdata />} />
           <Route path="/tambahdatasiswa" element={<TambahDataSiswa />} />
           <Route path="/editdata" element={<EditData />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="/dashboard" element={<Dashboard />} />
-
+          
         </Routes>
     <div>
       <button onClick={showAlert}></button>

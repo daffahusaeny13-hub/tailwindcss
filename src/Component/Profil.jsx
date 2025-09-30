@@ -3,35 +3,34 @@ import Swal from "sweetalert2";
 
 function Profil() {
   const navigate = useNavigate(); 
-  
-  const handleSejarah = () => {
+
+  const handleManchester = () => {
+
     Swal.fire({
-      title: "Lionel Messi",
-      text: "Lionel Messi adalah pemain sepak bola Argentina salah satu terbaik sepanjang masa.",
+      title: "Manchester United",
+      text: " Manchester United telah memenangkan banyak trofi di sepak bola Inggris, termasuk 20 gelar Liga terbanyak dalam sejarah, 13 gelar Piala FA, 6 gelar Piala Liga dan 21 gelar Community Shield FA",
     });
   };
   
   return (
       <div className="p-50 mx-55">
       <h1 className="text-center text-3xl font-bold mb-3"></h1>
-      <div className="bg-white shadow-lg rounded-2x1 p-6 max-w-sm w-full texy-center">
+      <div className="text-red-300 max-w-md bg-white shadow-lg p-3 ">
         <img
-          className="w-28 h-30 rounded-full mx-auto border-4 border-cyan-300 shadow-md"
-          src="https://i.pinimg.com/736x/c7/b2/4e/c7b24efe2effb692793ff42466e0273d.jpg"
+          className="w-45  h-45 rounded-full mx-auto border-3 border-red-300 shadow-md"
+          src="https://i.pinimg.com/1200x/09/72/9c/09729c858ff2b8ea6165cd8bd90f598f.jpg"
           alt="Profil"
           />
       </div>
 
-      <div className="text-center text-cyan-300 max-w-md bg-white shadow-lg rounded-2xl p-3 border">
-        <h2>Lionel Messi</h2>
-        <p>Messi beridentik dengan Ballon d'Or</p>
-        <p>La Pulga</p>
+      <div className="text-center text-red-300 max-w-md bg-white shadow-lg p-3 border font-semibold">
+        <h2>The Red Devils</h2>
 
         <button
-          onClick={handleSejarah}
-          className="bg-yellow-500 text-white ml-50 px-2 py-1 rounded"
+          onClick={handleManchester}
+          className="flex justify-center bg-red-700 text-white ml-50 px-2 py-1 rounded font-semibold"
         >
-          Sejarah
+         M.U
         </button>
       </div>
     </div>
