@@ -1,7 +1,6 @@
 import React from "react";
-import Swal from "sweetalert2";
 import { Route, Routes } from "react-router-dom";
-
+import ppdb from "../public/ppdb.jpg"
 function HomePage() {
 
 }

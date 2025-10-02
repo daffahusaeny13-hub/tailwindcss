@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "materi_tailwind",
   "private": true,
   "version": "0.0.0",
@@ -31,16 +30,4 @@
     "globals": "^16.3.0",
     "vite": "^7.1.2"
   }
-=======
-  "name": "tugas-ppdb",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
->>>>>>> ae25c0e (membuat tugas PPBD)
 }
