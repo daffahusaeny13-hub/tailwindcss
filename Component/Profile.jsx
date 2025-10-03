@@ -28,7 +28,7 @@ return (
             <div className="mt-3 text-gray-700">
                 <img
                 className="mx-auto mb-3 rounded-lg-shadow"
-                alt="Profile"
+                alt=""
                 src="https://i.pinimg.com/736x/81/a0/d5/81a0d50d6254a0e411ae15d7de92e490.jpg"
                 />
             </div>
